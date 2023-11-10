@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adml:architecture xmlns:adml="http://example.com/adml">
+  <adml:components>
+    <adml:component id="user-service"> <!-- Aqui se aplica uno de los primeros microservicios-->
+      <adml:name>Daniel Sanchez</adml:name>
+      <adml:description>Gestion de usuarios</adml:description>
+      <adml:interfaces>
+        <adml:interface id="rest">
+          <adml:name>Inicio</adml:name>
+          <adml:description>Interfaz para interactuar con el servicio de usuarios.</adml:description>
+        </adml:interface>
+      </adml:interfaces>
+    </adml:component>
+
+    <adml:component id="product-service"> <!-- Aqui se aplica el segundo microservicios-->
+      <adml:name>Productos</adml:name>
+      <adml:description>Información de productos.</adml:description>
+      <adml:interfaces>
+        <adml:interface id="rest">
+          <adml:name>Ver Productos</adml:name>
+          <adml:description>Interfaz para interactuar con el servicio de productos.</adml:description>
+        </adml:interface>
+      </adml:interfaces>
+    </adml:component>
+
+    <adml:component id="microservice-1"> <!-- En este se aplica el tercer microservicio-->
+      <adml:name>Pagina</adml:name>
+      <adml:description>Descripción de la pagina 2</adml:description>
+      <adml:interfaces>
+        <adml:interface id="rest">
+          <adml:name>Pagina 2</adml:name>
+          <adml:description>Interfaz para interactuar con la pagina 2</adml:description>
+        </adml:interface>
+      </adml:interfaces>
+    </adml:component>
+    
+    <adml:component id="microservice-2"> <!-- Y por ultimo aqui se aplica el cuarto microservicio-->
+      <adml:name>Pagina</adml:name>
+      <adml:description>Descripción de pagina 3</adml:description>
+      <adml:interfaces>
+        <adml:interface id="rest">
+          <adml:name>Pagina 3</adml:name>
+          <adml:description>Interfaz para interactuar con la pagina 3</adml:description>
+        </adml:interface>
+      </adml:interfaces>
+    </adml:component>
+
+  </adml:components>
+
+  <adml:relationships>
+    <adml:relation>
+      <adml:source id="user-service"/>
+      <adml:target id="product-service"/>
+      <adml:type>Comunicación</adml:type>
+      <adml:description>El Servicio de Usuarios se comunica con el Servicio de Productos.</adml:description>
+    </adml:relation>
+
+  </adml:relationships>
+</adml:architecture>
