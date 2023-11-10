@@ -1,0 +1,25 @@
+ Este código en Python utiliza la biblioteca xml.etree.ElementTree para analizar un archivo XML con una estructura específica (ADML).
+
+ Importar la Biblioteca:
+
+Se utiliza xml.etree.ElementTree as ET para acceder a las funciones de procesamiento de XML.
+Parsear el Archivo XML:
+
+tree = ET.parse('adml.xml'): Lee el archivo XML y crea un árbol de elementos para facilitar su manipulación.
+root = tree.getroot(): Obtiene el elemento raíz del árbol.
+Extraer Información de Componentes:
+
+Utiliza un bucle for para recorrer todos los elementos "component" en el XML.
+Obtiene el ID, nombre y descripción de cada componente y los imprime.
+Luego, para cada componente, busca las interfaces asociadas y también imprime su información.
+Extraer Información de Relaciones:
+
+Utiliza otro bucle for para recorrer los elementos "relation" en el XML.
+Obtiene la fuente, destino, tipo y descripción de cada relación e imprime esta información.
+Imprimir Resultados:
+
+Cada vez que extrae información, la imprime en la consola para que el usuario pueda verla.
+Namespace:
+
+Debido a que el XML utiliza un espacio de nombres (http://example.com/adml), se especifica este espacio de nombres al buscar elementos. Esto se hace utilizando el argumento namespaces en las funciones findall y find.
+En resumen, este código en Python analiza un archivo XML específico, extrae información sobre componentes y relaciones, y la imprime en la consola para que sea fácilmente comprensible y utilizable.
