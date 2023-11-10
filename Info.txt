@@ -1,0 +1,1 @@
+Este archivo te explicara un poco de lo que es el codigo sobre adml.xml y analizar_adml.py
