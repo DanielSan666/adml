@@ -1,1 +1,31 @@
 Este archivo te explicara un poco de lo que es el codigo sobre adml.xml y analizar_adml.py
+
+Este documento describe la estructura de un sistema que utiliza pequeñas partes independientes llamadas "microservicios". Cada microservicio realiza una tarea específica y se comunica con otros para lograr un objetivo más amplio.
+
+Microservicio de Usuarios (user-service):
+
+Nombre: Daniel Sanchez
+Descripción: Gestiona usuarios.
+Interfaz: Proporciona una interfaz llamada "Inicio" para interactuar con el servicio de usuarios.
+Microservicio de Productos (product-service):
+
+Nombre: Productos
+Descripción: Proporciona información sobre productos.
+Interfaz: Ofrece una interfaz llamada "Ver Productos" para interactuar con el servicio de productos.
+Microservicio 1 (microservice-1):
+
+Nombre: Página
+Descripción: Descripción de la página 2.
+Interfaz: Ofrece una interfaz llamada "Página 2" para interactuar con la página 2.
+Microservicio 2 (microservice-2):
+
+Nombre: Página
+Descripción: Descripción de la página 3.
+Interfaz: Ofrece una interfaz llamada "Página 3" para interactuar con la página 3.
+Relaciones:
+
+Comunicación entre Microservicios:
+El "Servicio de Usuarios" se comunica con el "Servicio de Productos".
+Esta comunicación se realiza a través de una interfaz llamada "rest".
+Descripción: "El Servicio de Usuarios se comunica con el Servicio de Productos."
+En resumen, este código describe cómo diferentes partes del sistema (microservicios) realizan tareas específicas y se comunican entre sí para lograr un funcionamiento conjunto.
